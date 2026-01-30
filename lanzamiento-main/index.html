@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinucan | Paseos Caninos con GPS en Montería</title>
+  <meta name="description"
+    content="Sinucan ofrece paseos caninos profesionales con seguimiento GPS en tiempo real en Montería. 4 años de experiencia cuidando a tu mejor amigo.">
+  <meta name="keywords" content="paseos caninos, montería, gps perros, cuidado animal, snacks para perros, sinucan">
+  <meta name="author" content="Sinucan">
+
+  <!-- Optimización para móviles -->
+  <meta name="theme-color" content="#ff9800">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Preconectar a CDNs -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- ===== Bootstrap CSS ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pO7jy6D6b3+DpJ4ZwS6JlK1pZf5lV1A50Kz3Hp2LjqXv9nZcdT3J0X4W9p3VYF2hMRvAqNfGq4oLzY1hkG5PzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ===== Swiper CSS (Carrusel) ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- ===== AOS CSS (Animaciones al hacer scroll) ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- ===== Tu CSS personalizado ===== -->
+  <link rel="stylesheet" href="sinucan.css" />
+  <!-- Animaciones AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .food-card {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .food-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+    }
+
+    .food-img-container {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .food-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .food-card:hover .food-img-container img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ================= Header / Navbar ================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <!-- Logo con Icono -->
+        <a class="navbar-brand fw-bold fs-3" href="#inicio"
+          style="color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+          <i class="fas fa-paw me-2"></i>Sinucan
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#food">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#historia">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <!-- ================= Sección Inicio / Carrusel (9 Slides con Video de Fondo) ================= -->
+  <section id="inicio">
+    <!-- Video de fondo para el banner -->
+    <video autoplay muted loop playsinline class="video-bg" preload="auto">
+      <source src="video/7.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Bienvenida -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Bienvenidos a Sinucan</h1>
+            <p>Paseos caninos profesionales con 4 años de experiencia.</p>
+            <a href="#contacto" class="btn-banner">Agenda tu paseo</a>
+          </div>
+        </div>
+        <!-- Slide 2: GPS Tracking -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Tecnología GPS en Tiempo Real</h1>
+            <p>La única app donde ves la ruta exacta de tu perro en vivo.</p>
+            <a href="#quienes-somos" class="btn-banner">Ver tecnología</a>
+          </div>
+        </div>
+        <!-- Slide 3: Fundador -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Liderado por Ingenieros</h1>
+            <p>Fundado por un Ingeniero de Sistemas para tu tranquilidad.</p>
+            <a href="#nosotros" class="btn-banner">Conoce al fundador</a>
+          </div>
+        </div>
+        <!-- Slide 4: Equipo Coordinado -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Equipo de Trabajo Coordinado</h1>
+            <p>Un paseador en campo + un monitor en tiempo real.</p>
+            <a href="#equipo" class="btn-banner">Ver nuestro equipo</a>
+          </div>
+        </div>
+        <!-- Slide 5: Sinucan Food -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Tienda Sinucan FOOD</h1>
+            <p>Helados y snacks saludables para premiar a tu peludo.</p>
+            <a href="#food" class="btn-banner">Ir a la tienda</a>
+          </div>
+        </div>
+        <!-- Slide 6: Cuidado Profesional -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Cuidado Profesional</h1>
+            <p>Personal capacitado en primeros auxilios y manejo canino.</p>
+            <a href="#servicios" class="btn-banner">Nuestros servicios</a>
+          </div>
+        </div>
+        <!-- Slide 7: Seguridad -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Seguridad y Confianza</h1>
+            <p>Protocolos estrictos para que tu perro esté siempre a salvo.</p>
+            <a href="#contacto" class="btn-banner">Agendar ahora</a>
+          </div>
+        </div>
+        <!-- Slide 8: Tips -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Tips para Dueños</h1>
+            <p>Aprende a cuidar mejor a tu mascota con nuestros consejos.</p>
+            <a href="#tips" class="btn-banner">Ver Tips</a>
+          </div>
+        </div>
+        <!-- Slide 9: Horarios -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Horarios Flexibles</h1>
+            <p>Nos adaptamos a tu rutina diaria sin complicaciones.</p>
+            <a href="#contacto" class="btn-banner">Consultar horarios</a>
+          </div>
+        </div>
+        <!-- Slide 10: Garantía -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Garantía de Felicidad</h1>
+            <p>Tu tranquilidad y la alegría de tu perro es nuestra meta.</p>
+            <a href="#quienes-somos" class="btn-banner">Saber más</a>
+          </div>
+        </div>
+        <!-- Slide 11: Baños -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Baños Relajantes</h1>
+            <p>Servicio de aseo completo para que luzca radiente.</p>
+            <a href="#servicios" class="btn-banner">Ver planes de baño</a>
+          </div>
+        </div>
+        <!-- Slide 12: Guardería -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Guardería Especializada</h1>
+            <p>Un hogar fuera de casa para tu mejor amigo.</p>
+            <a href="#contacto" class="btn-banner">Reservar cupo</a>
+          </div>
+        </div>
+        <!-- Slide 13: Hidratación -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Hidratación Constante</h1>
+            <p>Agua fresca y descansos programados en cada paseo.</p>
+            <a href="#servicios" class="btn-banner">Ver protocolo</a>
+          </div>
+        </div>
+        <!-- Slide 14: Rutas -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Rutas Exploratorias</h1>
+            <p>Variamos los recorridos para estimular el olfato y mente.</p>
+            <a href="#servicios" class="btn-banner">Ver recorridos</a>
+          </div>
+        </div>
+        <!-- Slide 15: Reportes -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Reportes Detallados</h1>
+            <p>Recibe fotos y videos de las aventuras de tu perro.</p>
+            <a href="#quienes-somos" class="btn-banner">Ver ejemplo</a>
+          </div>
+        </div>
+        <!-- Slide 16: Premios -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Premios Saludables</h1>
+            <p>Usamos gomitas y snacks 100% naturales en el Plan Plus.</p>
+            <a href="#food" class="btn-banner">Ver premios</a>
+          </div>
+        </div>
+        <!-- Slide 17: Comunidad -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Comunidad Sinucan</h1>
+            <p>Únete a los cientos de dueños felices en Montería.</p>
+            <a href="#footer" class="btn-banner">Síguenos en las redes</a>
+          </div>
+        </div>
+        <!-- Slide 18: Promociones -->
+        <div class="swiper-slide">
+          <div class="banner-content">
+            <h1>Promociones Mensuales</h1>
+            <p>Suscríbete a nuestros planes y recibe beneficios extra.</p>
+            <a href="#servicios" class="btn-banner">Ver planes</a>
+          </div>
+        </div>
+      </div>
+      <!-- Navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- ================= Sección Quiénes Somos (Actualizada) ================= -->
+  <section id="quienes-somos">
+    <!-- Video de Fondo (Optimizado con mute/loop/autoplay/playsinline) -->
+    <video autoplay muted loop playsinline class="video-bg" preload="auto">
+      <source src="video/6.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container py-5">
+      <!-- Título Principal -->
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Quiénes Somos</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">Más que paseadores, somos tecnología al
+          servicio de tu mascota.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-11">
+
+          <!-- Bloque de Trayectoria -->
+          <div class="text-center mb-5" data-aos="fade-up">
+            <h3 class="fw-bold mb-4" style="color: var(--primary);">Nuestra Trayectoria</h3>
+            <div class="row justify-content-center">
+              <div class="col-md-9">
+                <p class="fs-4 lh-lg">Con <strong>4 años de experiencia</strong>, Sinucan ha evolucionado para
+                  convertirse en el servicio líder de paseos caninos en la región. Nacimos de la pasión por los animales
+                  y la ingeniería, aplicando soluciones de sistemas al bienestar animal.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid de Pilares: Tecnología y Equipo -->
+          <div class="row g-5 mb-5 align-items-stretch">
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="h-100 p-4 rounded-4"
+                style="background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(255, 152, 0, 0.2);">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3 bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 50px; height: 50px; min-width: 50px;">
+                    <i class="fas fa-microchip text-white fs-4"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold fs-4" style="color: var(--primary);">Tecnología e Innovación</h5>
+                </div>
+                <p class="mb-0 text-white">Nuestro fundador, <strong>Ingeniero de Sistemas</strong>, lidera el
+                  desarrollo tecnológico, asegurando que cada paseo esté monitoreado y optimizado con herramientas de
+                  última generación.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left">
+              <div class="h-100 p-4 rounded-4"
+                style="background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(255, 152, 0, 0.2);">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3 bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 50px; height: 50px; min-width: 50px;">
+                    <i class="fas fa-users text-white fs-4"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold fs-4" style="color: var(--primary);">Equipo y Logística</h5>
+                </div>
+                <p class="mb-0 text-white">Contamos con un <strong>equipo coordinado</strong>: el paseador en campo y un
+                  monitor en tiempo real. Aplicamos logística constante para garantizar que cada ruta se cumpla con los
+                  más altos estándares de seguridad.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Showcase: APP GPS -->
+          <div class="text-center mt-5 pt-4" data-aos="zoom-in">
+            <div class="d-inline-block px-4 py-2 rounded-pill mb-3"
+              style="background: rgba(255, 152, 0, 0.1); border: 1px solid var(--primary);">
+              <span class="fw-bold" style="color: var(--primary); letter-spacing: 1px;">DIFERENCIADOR CLAVE</span>
+            </div>
+            <h3 class="fw-bold display-6 mb-4">APP DE SEGUIMIENTO GPS EXCLUSIVA</h3>
+
+            <div class="row align-items-center justify-content-center g-4">
+              <div class="col-md-5 text-end d-none d-md-block">
+                <i class="fas fa-map-marked-alt text-primary" style="font-size: 8rem; opacity: 0.8;"></i>
+              </div>
+              <div class="col-md-6 text-start border-start border-primary border-2 ps-4">
+                <p class="fs-3 mb-4" style="color: #ffffff;">¿Te preocupa dónde está tu perro?</p>
+                <div class="mb-3">
+                  <h6 class="fw-bold text-primary fs-5"><i class="fas fa-check-circle me-2"></i> RUTA EN TIEMPO REAL
+                  </h6>
+                  <p class="text-white">Visualiza la ubicación exacta y el recorrido histórico de cada sesión.</p>
+                </div>
+                <div class="mb-3">
+                  <h6 class="fw-bold text-primary fs-5"><i class="fas fa-check-circle me-2"></i> TRANSPARENCIA TOTAL
+                  </h6>
+                  <p class="text-white">Sabes exactamente dónde estuvo, cuántas cuadras caminó y sus paradas.</p>
+                </div>
+                <div class="mb-0">
+                  <h6 class="fw-bold text-primary fs-5"><i class="fas fa-check-circle me-2"></i> ACCESO MULTIPLATAFORMA
+                  </h6>
+                  <p class="text-white">Disponible directamente desde nuestra plataforma web y móvil para tu comodidad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= secion servicios ======= -->
+  <section id="servicios" class="servicios-bg">
+    <!-- Video de Fondo Servicios -->
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="video/1.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+    <div class="container py-5">
+      <!-- Título Principal -->
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Nuestros Servicios</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">Calidad, transparencia y cuidado
+          profesional en cada paso.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-11">
+
+          <!-- Introducción: ¿Por qué Sinucan? -->
+          <div class="text-center mb-5" data-aos="fade-up">
+            <h3 class="fw-bold mb-4">¿Por qué confiar el paseo de tu perro a Sinucan?
+            </h3>
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <p class="fs-4 lh-lg text-white">
+                  Muchos dueños se preocupan porque, en otros servicios, los paseadores suelen permanecer sentados o
+                  distraídos.
+                  En Sinucan, <strong>este tipo de situaciones no ocurren</strong>. Aplicamos un sistema de monitoreo
+                  constante que asegura que tu perro se mantenga activo, feliz y supervisado en todo momento.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid de Características de Servicio -->
+          <div class="row g-4 mb-5 align-items-stretch">
+            <!-- Registro de necesidades -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="h-100 p-4 rounded-4"
+                style="background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(255, 152, 0, 0.2);">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3 bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 45px; height: 45px; min-width: 45px;">
+                    <i class="fas fa-map-marker-alt text-white fs-5"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold fs-4" style="color: var(--primary);">Registro de Necesidades</h5>
+                </div>
+                <p class="mb-0 text-white" style="font-size: 1.1rem;">Registramos la hora y el lugar exacto donde tu
+                  perro hace sus necesidades, permitiéndote conocer su comportamiento fisiológico.</p>
+              </div>
+            </div>
+
+            <!-- Reporte Detallado -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="h-100 p-4 rounded-4"
+                style="background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(255, 152, 0, 0.2);">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3 bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 45px; height: 45px; min-width: 45px;">
+                    <i class="fas fa-file-alt text-white fs-5"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold fs-4" style="color: var(--primary);">Reporte Detallado</h5>
+                </div>
+                <p class="mb-0 text-white" style="font-size: 1.1rem;">Al finalizar, recibes un resumen completo con
+                  observaciones, fotos y cualquier detalle importante del paseo.</p>
+              </div>
+            </div>
+
+            <!-- Atención Responsable -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="h-100 p-4 rounded-4"
+                style="background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(255, 152, 0, 0.2);">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3 bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 45px; height: 45px; min-width: 45px;">
+                    <i class="fas fa-shield-alt text-white fs-5"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold fs-4" style="color: var(--primary);">Atención Responsable</h5>
+                </div>
+                <p class="mb-0 text-white" style="font-size: 1.1rem;">Supervisión permanente. Evitamos malas prácticas
+                  de inactividad, priorizando siempre la seguridad y el bienestar del perro.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Showcase: Paseo Activo / GPS -->
+          <div class="text-center mt-5 pt-4" data-aos="zoom-in">
+            <h3 class="fw-bold display-6 mb-4">PASEO ACTIVO Y SUPERVISADO</h3>
+
+            <div class="row align-items-center justify-content-center g-5">
+              <div class="col-md-6 border-end border-primary border-2 pe-4 text-end">
+                <p class="fs-3 mb-4 text-white">Confirma el ejercicio de tu mascota</p>
+                <p class="fs-5 text-white">
+                  A diferencia de otros servicios, garantizamos que el tiempo contratado sea de <strong>calidad y
+                    movimiento</strong>.
+                  Recurrimos a tecnología GPS para que puedas auditar el trabajo y estar tranquilo.
+                </p>
+                <div class="d-inline-block mt-4 p-3 rounded-4"
+                  style="background: rgba(255, 152, 0, 0.1); border: 1px dashed var(--primary);">
+                  <h6 class="fw-bold text-primary mb-0"><i class="fas fa-history me-2"></i> RECORRIDO HISTÓRICO
+                    DISPONIBLE</h6>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="recorrido-img-container p-2 rounded-4 shadow-lg"
+                  style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+                  <img src="img/gps.jpg" alt="Mapa de recorrido GPS" class="img-fluid rounded-3 shadow">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center mt-5 mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Nuestros Planes</h2>
+      </div>
+
+      <!-- ======= PASEOS ======= -->
+      <div class="planes-paseos">
+        <h3 data-aos="fade-right" data-aos-duration="1000">Paseos</h3>
+        <div class="planes-grid">
+          <!-- Plan Básico -->
+          <div class="plan-card" data-servicio="Plan Básico" data-aos="fade-up" data-aos-duration="800">
+            <h4>Básico 🐾</h4>
+            <p>
+              Plan económico y confiable para las salidas diarias de tu perro.
+            </p>
+            <ul>
+              <li>
+                <strong>Duraciones disponibles:</strong>
+                <ul>
+                  <li>
+                    30 min – Ideal para perros pequeños o que se cansan
+                    rápido.
+                  </li>
+                  <li>45 min – Buena opción para perros medianos.</li>
+                  <li>
+                    1 hora – Recomendado para perros grandes o con más
+                    energía.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Frecuencia:</strong>
+                <ul>
+                  <li>
+                    <b>1 paseo diario</b> – suficiente si tu perro tiene
+                    actividad moderada dentro de casa.
+                  </li>
+                  <li>
+                    <b>2 paseos diarios</b> – ideal si quieres que tu perro
+                    salga dos veces para liberar energía, reducir ansiedad y
+                    no aburrirse.
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Incluye:</strong> Agua fresca.</li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+
+          <!-- Plan Plus -->
+          <div class="plan-card" data-servicio="Plan Plus" data-aos="fade-up" data-aos-duration="1000">
+            <h4>Plus 🐾</h4>
+            <p>
+              Para perros que disfrutan premios y un poco más de atención
+              durante el paseo.
+            </p>
+            <ul>
+              <li>
+                <strong>Duraciones disponibles:</strong>
+                <ul>
+                  <li>30 min – Adecuado para perros pequeños activos.</li>
+                  <li>
+                    45 min – Perfecto para perros medianos con energía
+                    moderada.
+                  </li>
+                  <li>
+                    1 hora – Ideal para perros grandes que necesitan gastar
+                    más energía.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Frecuencia:</strong>
+                <ul>
+                  <li>
+                    <b>1 paseo diario</b> – mantiene una rutina estable y
+                    saludable.
+                  </li>
+                  <li>
+                    <b>2 paseos diarios</b> – recomendado para perros que
+                    requieren más ejercicio o pasan largas horas solos.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Incluye:</strong> Agua fresca + Gomitas saludables
+                como premio.
+              </li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+
+          <!-- Plan Premium -->
+          <div class="plan-card" data-servicio="Plan Premium" data-aos="fade-up" data-aos-duration="1200">
+            <h4>Premium 🐾</h4>
+            <p>
+              Experiencia completa: paseo, premios y snacks para consentir a
+              tu mascota.
+            </p>
+            <ul>
+              <li>
+                <strong>Duraciones disponibles:</strong>
+                <ul>
+                  <li>
+                    30 min – Recomendado para perros pequeños que disfrutan
+                    premios.
+                  </li>
+                  <li>45 min – Excelente para perros medianos.</li>
+                  <li>
+                    1 hora – Perfecto para perros grandes y con mucha energía.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Frecuencia:</strong>
+                <ul>
+                  <li>
+                    <b>1 paseo diario</b> – buena opción para mantener
+                    actividad y entretenimiento.
+                  </li>
+                  <li>
+                    <b>2 paseos diarios</b> – ideal para perros muy activos,
+                    razas grandes o para quienes quieren que el perro salga
+                    dos veces al día.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Incluye:</strong> Agua fresca + Gomitas + Helados y
+                Croquetas (snacks especiales).
+              </li>
+              <li>
+                <em>Beneficio extra:</em> Opción de paseo individual (el perro
+                sale solo) para atención personalizada.
+              </li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= BAÑOS ======= -->
+      <div class="planes-banos">
+        <h3 data-aos="fade-left" data-aos-duration="1000">Baños</h3>
+        <div class="planes-grid">
+          <!-- Baño Pequeño -->
+          <div class="plan-card" data-servicio="Baño Pequeño" data-aos="fade-up" data-aos-duration="800">
+            <h4>Pequeño</h4>
+            <p>
+              Baño rápido y cuidadoso ideal para perros de tamaño pequeño.
+            </p>
+            <ul>
+              <li>Baño completo con shampoo suave.</li>
+              <li>Cepillado básico.</li>
+              <li>Secado con toalla o aire tibio según preferencia.</li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+
+          <!-- Baño Mediano -->
+          <div class="plan-card" data-servicio="Baño Mediano" data-aos="fade-up" data-aos-duration="1000">
+            <h4>Mediano</h4>
+            <p>
+              Baño más completo para perros de tamaño mediano con cuidado
+              extra en el pelaje.
+            </p>
+            <ul>
+              <li>Shampoo especializado según tipo de piel.</li>
+              <li>Cepillado y desenredado ligero.</li>
+              <li>Limpieza básica de oídos y secado.</li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+
+          <!-- Baño Grande -->
+          <div class="plan-card" data-servicio="Baño Grande" data-aos="fade-up" data-aos-duration="1200">
+            <h4>Grande</h4>
+            <p>
+              Servicio completo para perros grandes que requieren mayor
+              cuidado y manipulación.
+            </p>
+            <ul>
+              <li>
+                Baño con shampoo especializado y acondicionador si aplica.
+              </li>
+              <li>Cepillado profundo y secado adecuado.</li>
+              <li>Opcional: corte de uñas y limpieza de oídos.</li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= GUARDERÍA ======= -->
+      <div class="planes-guarderia" data-aos="fade-up" data-aos-duration="1000">
+        <h3>Guardería Canina</h3>
+        <div class="planes-grid">
+          <div class="plan-card" data-servicio="Guardería Canina">
+            <h4>Guardería</h4>
+            <p>
+              Espacio seguro y divertido donde cuidamos a tu perro con
+              actividades, paseos y supervisión durante tu ausencia.
+            </p>
+            <ul>
+              <li>Modalidades: por horas, medio día o día completo.</li>
+              <li>Paseos incluidos según la jornada de la guardería.</li>
+              <li>Juegos, socialización y supervisión constante.</li>
+              <li>
+                Alimentación según indicaciones del dueño (si corresponde).
+              </li>
+            </ul>
+            <button class="btn-plan">Elegir Plan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sección Estadísticas (Metrics) ================= -->
+  <section id="stats" class="py-5"
+    style="background: linear-gradient(135deg, rgba(20,20,20,1) 0%, rgba(40,40,40,1) 100%); border-top: 1px solid rgba(255,152,0,0.2); border-bottom: 1px solid rgba(255,152,0,0.2);">
+    <div class="container py-4">
+      <div class="row g-4 text-center">
+        <!-- Años Experiencia -->
+        <div class="col-6 col-md-3" data-aos="zoom-in">
+          <div class="stat-item p-3">
+            <i class="fas fa-calendar-check text-primary mb-3" style="font-size: 2.5rem;"></i>
+            <h2 class="fw-bold text-white mb-0 mt-2"><span class="counter">4</span>+</h2>
+            <p class="text-white-50 text-uppercase small ls-2 m-0">Años Exp.</p>
+          </div>
+        </div>
+
+        <!-- Paseos Realizados -->
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-item p-3">
+            <i class="fas fa-route text-primary mb-3" style="font-size: 2.5rem;"></i>
+            <h2 class="fw-bold text-white mb-0 mt-2"><span class="counter">5000</span>+</h2>
+            <p class="text-white-50 text-uppercase small ls-2 m-0">Paseos Realizados</p>
+          </div>
+        </div>
+        <!-- GPS/Reportes -->
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-item p-3">
+            <i class="fas fa-satellite-dish text-primary mb-3" style="font-size: 2.5rem;"></i>
+            <h2 class="fw-bold text-white mb-0 mt-2"><span class="counter">100</span>%</h2>
+            <p class="text-white-50 text-uppercase small ls-2 m-0">Seguimiento GPS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sección Food (Tienda Premium) ================= -->
+  <section id="food" class="py-5" style="position: relative; overflow: visible;">
+    <!-- Video de Fondo Food -->
+    <video autoplay muted loop playsinline class="video-bg" preload="auto"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none;">
+      <source src="video/8.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1; pointer-events: none;">
+    </div>
+
+    <div class="container py-5" style="position:relative; z-index:2;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Nuestra Tienda FOOD</h2>
+        <p class="lead fs-4 text-white" style="font-weight: 500;">Snacks 100% naturales, helados
+          artesanales y premios
+          premium para tu mejor amigo.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Producto 1: Helado Canino -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-card h-100 p-0 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+            <div class="food-img-container" style="height: 200px; overflow: hidden;">
+              <img src="img/helado.jpg" alt="Helado Canino" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="fw-bold text-dark mb-0">Helado Canino Pollo</h4>
+                <span class="badge bg-primary">Top Ventas</span>
+              </div>
+              <p class="text-muted small mb-3">Refrescante helado natural de pollo y avena, sin lactosa ni azúcares
+                añadidos.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-4 fw-bold text-primary">$12,000</span>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 50px;">
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-nombre="Helado Canino Pollo"
+                    data-precio="12000">
+                    <i class="fas fa-plus me-1"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2: Galletas de Avena -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-card h-100 p-0 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+            <div class="food-img-container" style="height: 200px; overflow: hidden;">
+              <img src="img/galletas.jpg" alt="Galletas Saludables" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="fw-bold text-dark mb-0">Galletas de Avena</h4>
+                <span class="badge bg-info">Artesanal</span>
+              </div>
+              <p class="text-muted small mb-3">Crujientes galletas horneadas con avena, manzana y un toque de miel
+                natural.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-4 fw-bold text-primary">$8,000</span>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 50px;">
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-nombre="Galletas de Avena"
+                    data-precio="8000">
+                    <i class="fas fa-plus me-1"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3: Snacks Energéticos -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-card h-100 p-0 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+            <div class="food-img-container" style="height: 200px; overflow: hidden;">
+              <img src="img/helado2.jpg" alt="Snacks Caninos" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="fw-bold text-dark mb-0">Snacks de Hígado</h4>
+                <span class="badge bg-warning text-dark">Premium</span>
+              </div>
+              <p class="text-muted small mb-3">Trocitos deshidratados de hígado 100% naturales, ideales para
+                entrenamiento y premios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-4 fw-bold text-primary">$10,000</span>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 50px;">
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-nombre="Snacks de Hígado"
+                    data-precio="10000">
+                    <i class="fas fa-plus me-1"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carrito Simple Estático (Original) -->
+    <div class="row mt-3" data-aos="fade-up" style="position: relative; z-index: 100;">
+      <div class="col-12 text-center">
+        <div id="carrito" class="p-4 rounded-4 shadow-lg mx-auto"
+          style="max-width: 800px; position: relative; z-index: 100; pointer-events: all; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 1px solid rgba(255, 152, 0, 0.2);">
+          <h4 class="mb-4 text-white fw-bold border-bottom border-primary border-opacity-25 pb-2">
+            <i class="fas fa-shopping-basket me-2 text-primary"></i>Tu Pedido
+          </h4>
+          <div id="lista-carrito" class="mb-3 text-start">
+            <!-- JS will populate this -->
+            <div class="text-center py-4 text-white-50">Tu carrito está vacío. Agrega algo rico para tu peludo.</div>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-primary border-opacity-25">
+            <p class="fw-bold fs-4 text-white mb-0">Total: <span id="total-carrito" class="text-primary">$0</span></p>
+            <button class="btn btn-success rounded-pill px-4" id="btn-finalizar-whatsapp">
+              <i class="fab fa-whatsapp me-2"></i> Finalizar Pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integración de Historia, Misión y Visión -->
+    <div id="historia" class="row justify-content-center mt-5 pt-5 border-top border-primary border-opacity-25"
+      data-aos="fade-up" style="position: relative; z-index: 1; margin-top: 5rem !important;">
+      <div class="col-lg-11">
+
+        <!-- Título Dinámico -->
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title fw-bold">Nuestra HISTORIA</h2>
+          <p class="lead fs-4 text-white-50" style="font-weight: 600;">El origen de una pasión tecnológica
+            por los perros.</p>
+        </div>
+
+        <!-- Bloque Historia Principal -->
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h3 class="fw-bold mb-4 text-white">Cómo nació SINUCAN</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <p class="fs-5 lh-lg text-white">
+                Sinucan nació como una iniciativa personal con el objetivo de costear mis estudios en
+                <strong>Ingeniería de Sistemas</strong>. Lo que comenzó como un trabajo universitario se transformó
+                en
+                una <strong>verdadera pasión</strong>. Hoy, unimos la ingeniería y el amor animal para automatizar y
+                mejorar el cuidado canino en Montería.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid: Misión, Visión y Filosofía -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-100 p-4 rounded-4"
+              style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 152, 0, 0.4); backdrop-filter: blur(5px);">
+              <h4 class="fw-bold fs-4 mb-3">Misión</h4>
+              <p class="text-white mb-0" style="font-size: 1.15rem; line-height: 1.7;">Garantizar paseos seguros,
+                baños de calidad y un cuidado integral mediante herramientas digitales que optimicen la experiencia
+                de cada dueño.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-100 p-4 rounded-4"
+              style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 152, 0, 0.4); backdrop-filter: blur(5px);">
+              <h4 class="fw-bold fs-4 mb-3">Visión</h4>
+              <p class="text-white mb-0" style="font-size: 1.15rem; line-height: 1.7;">Ser el servicio integral más
+                confiable e innovador, creciendo de la mano de la tecnología móvil y monitoreo en tiempo real.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="h-100 p-4 rounded-4"
+              style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 152, 0, 0.4); backdrop-filter: blur(5px);">
+              <h4 class="fw-bold fs-4 mb-3">Filosofía</h4>
+              <p class="text-white mb-0" style="font-size: 1.15rem; line-height: 1.7;">Cuidado basado en el respeto y el
+                cariño, tratando a cada perro como un individuo mediante métodos de refuerzo positivo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección Nuestras Mascotas (Ahora dentro de Food) -->
+        <div id="nuestras-mascotas" class="mt-5 pt-5 border-top border-primary border-opacity-25"
+          style="background: transparent !important; position: relative; z-index: 1;">
+          <div class="text-center mb-4" data-aos="fade-up">
+            <h3 class="fw-bold fs-2 mb-2">Nuestras MASCOTAS</h3>
+            <p class="text-white-50 fs-5">Explora la felicidad y seguridad de nuestros paseos diarios.</p>
+          </div>
+
+          <!-- Swiper Container (Original Preservado) -->
+          <div class="swiper gallerySwiper py-4 mb-5">
+            <div class="swiper-wrapper" id="mascotas-slides-wrapper">
+              <!-- Los slides se mantienen aquí, me aseguro de no borrarlos -->
+              <!-- Slide 1: Apolo ❤️ -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Apolo ❤️.webp" alt="Apolo" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🐶 Apolo</div>
+                </div>
+                <div class="pet-name-bottom">Apolo</div>
+              </div>
+              <!-- Slide 2: Alaska -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Alaska.webp" alt="Alaska" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">❄️ Alaska</div>
+                </div>
+                <div class="pet-name-bottom">Alaska</div>
+              </div>
+              <!-- Slide 3: Balu -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/balu.jpg" alt="Balu" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🐾 Balu</div>
+                </div>
+                <div class="pet-name-bottom">Balu</div>
+              </div>
+              <!-- Slide 4: Jack -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Jack ♥️.webp" alt="Jack" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🎖️ Jack</div>
+                </div>
+                <div class="pet-name-bottom">Jack</div>
+              </div>
+              <!-- Slide 5: Piqué -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Piqué ❤️.webp" alt="Piqué" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">⚽ Piqué</div>
+                </div>
+                <div class="pet-name-bottom">Piqué</div>
+              </div>
+              <!-- Slide 6: Roma -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Roma.webp" alt="Roma" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🇮🇹 Roma</div>
+                </div>
+                <div class="pet-name-bottom">Roma</div>
+              </div>
+              <!-- Slide 7: Thor -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Thor ♥️.webp" alt="Thor" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">⚡ Thor</div>
+                </div>
+                <div class="pet-name-bottom">Thor</div>
+              </div>
+              <!-- Slide 8: Tigre -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Tigre ❤️ (1).webp" alt="Tigre" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🐯 Tigre</div>
+                </div>
+                <div class="pet-name-bottom">Tigre</div>
+              </div>
+              <!-- Slide 9: Apolo (jpg) -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/Apolo.jpg" alt="Apolo" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">✨ Apolo</div>
+                </div>
+                <div class="pet-name-bottom">Apolo</div>
+              </div>
+              <!-- Slide 10: Blue (jpg) -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/blue.jpg" alt="Blue" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">💎 Blue</div>
+                </div>
+                <div class="pet-name-bottom">Blue</div>
+              </div>
+              <!-- Slide 11: Blue (webp) -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/blue.webp" alt="Blue" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🌊 Blue</div>
+                </div>
+                <div class="pet-name-bottom">Blue</div>
+              </div>
+              <!-- Slide 12: Bruno -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/bruno.jpg" alt="Bruno" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🟤 Bruno</div>
+                </div>
+                <div class="pet-name-bottom">Bruno</div>
+              </div>
+              <!-- Slide 13: Crispeta -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/crispeta.webp" alt="Crispeta" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🍿 Crispeta</div>
+                </div>
+                <div class="pet-name-bottom">Crispeta</div>
+              </div>
+              <!-- Slide 14: Dimitri -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/dimitri.jpg" alt="Dimitri" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">�️ Dimitri</div>
+                </div>
+                <div class="pet-name-bottom">Dimitri</div>
+              </div>
+              <!-- Slide 15: Donald -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/donald.jpg" alt="Donald" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🦆 Donald</div>
+                </div>
+                <div class="pet-name-bottom">Donald</div>
+              </div>
+              <!-- Slide 16: Fox -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/fox.jpg" alt="Fox" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🦊 Fox</div>
+                </div>
+                <div class="pet-name-bottom">Fox</div>
+              </div>
+              <!-- Slide 17: Jacob -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/jacob.jpg" alt="Jacob" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">📖 Jacob</div>
+                </div>
+                <div class="pet-name-bottom">Jacob</div>
+              </div>
+              <!-- Slide 18: Kiara -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/kiara.jpg" alt="Kiara" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">� Kiara</div>
+                </div>
+                <div class="pet-name-bottom">Kiara</div>
+              </div>
+              <!-- Slide 19: Leo -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/leo.webp" alt="Leo" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">♌ Leo</div>
+                </div>
+                <div class="pet-name-bottom">Leo</div>
+              </div>
+              <!-- Slide 20: Lilo -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/lilo.webp" alt="Lilo" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🎀 Lilo</div>
+                </div>
+                <div class="pet-name-bottom">Lilo</div>
+              </div>
+              <!-- Slide 21: Lupe -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/lupe.jpg" alt="Lupe" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🌸 Lupe</div>
+                </div>
+                <div class="pet-name-bottom">Lupe</div>
+              </div>
+              <!-- Slide 22: Makena -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/makena.jpg" alt="Makena" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">💖 Makena</div>
+                </div>
+                <div class="pet-name-bottom">Makena</div>
+              </div>
+              <!-- Slide 23: Oliva -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/oliva.jpg" alt="Oliva" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🌿 Oliva</div>
+                </div>
+                <div class="pet-name-bottom">Oliva</div>
+              </div>
+              <!-- Slide 24: Ozymandias -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/ozymandias.webp" alt="Ozymandias" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">👑 Ozy</div>
+                </div>
+                <div class="pet-name-bottom">Ozymandias</div>
+              </div>
+              <!-- Slide 25: Peahe -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/peahe.jpg" alt="Peahe" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">🎾 Peahe</div>
+                </div>
+                <div class="pet-name-bottom">Peahe</div>
+              </div>
+              <!-- Slide 26: Skype -->
+              <div class="swiper-slide">
+                <div class="gallery-item-alt rounded-4 overflow-hidden position-relative mx-2">
+                  <img src="img/fotos de los perros/skype.jpg" alt="Skype" class="img-fluid w-100"
+                    style="height: 300px; object-fit: cover;">
+                  <div class="gallery-overlay-alt">📞 Skype</div>
+                </div>
+                <div class="pet-name-bottom">Skype</div>
+              </div>
+            </div>
+            <!-- Pagination / Navigation -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Widget: Estado del Paseo -->
+        <div class="mt-5 d-flex justify-content-center" data-aos="fade-up">
+          <div class="status-widget p-3 rounded-pill d-flex align-items-center gap-3"
+            style="background: rgba(255,152,0,0.1); border: 1px solid var(--primary);">
+            <div class="status-pulse-alt"></div>
+            <span class="text-white fw-bold">ESTADO HOY: </span>
+            <span class="badge rounded-pill bg-success text-white">Óptimo para paseos</span>
+            <span class="text-white-50 small d-none d-md-inline">| Baja probabilidad de lluvia en Montería</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ================= Sección Testimonios (Social Proof) ================= -->
+  <section id="testimonios" class="py-5"
+    style="background: rgba(0,0,0,0.9); border-top: 1px solid rgba(255,152,0,0.3);">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Lo que dicen nuestros clientes</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">La tranquilidad de nuestros clientes es
+          nuestra mejor garantía.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonio 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card rounded-4 p-4 text-center h-100"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2);">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+            </div>
+            <p class="text-white fs-5 mb-4">"Lo que más me gusta es la APP GPS. Ver en vivo por dónde va mi Bruno me da
+              una paz increíble. ¡Recomendadísimos!"</p>
+            <div class="d-flex align-items-center justify-content-center">
+              <div>
+                <h5 class="fw-bold mb-0" style="color: var(--primary);">Carolina M.</h5>
+                <small class="text-white-50">Mamá de Bruno (Labrador)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card rounded-4 p-4 text-center h-100"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2);">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+            </div>
+            <p class="text-white fs-5 mb-4">"Excelente puntualidad y profesionalismo. Se nota el amor de Javier y su
+              equipo por los animales. El reporte ddetallado es genial."</p>
+            <div class="d-flex align-items-center justify-content-center">
+              <div>
+                <h5 class="fw-bold mb-0" style="color: var(--primary);">Andrés G.</h5>
+                <small class="text-white-50">Papá de Toby (Pastoral Alemán)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card rounded-4 p-4 text-center h-100"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2);">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+              <i class="fas fa-star text-primary"></i>
+            </div>
+            <p class="text-white fs-5 mb-4">"Mis perritos esperan ansiosos al paseador todos los días. Han mejorado
+              mucho su comportamiento gracias a la socialización."</p>
+            <div class="d-flex align-items-center justify-content-center">
+              <div>
+                <h5 class="fw-bold mb-0" style="color: var(--primary);">María J.</h5>
+                <small class="text-white-50">Mamá de Luna y Sol (Golden)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sección Nuestro Equipo (Rediseñada desde cero) ================= -->
+  <section id="equipo" class="equipo-tips-section">
+    <!-- Video de Fondo (Original preservado) -->
+    <video autoplay muted loop playsinline class="video-bg" preload="auto">
+      <source src="video/9.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container py-5" style="position:relative; z-index:2;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Nuestro Equipo</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">Profesionales dedicados al bienestar y la
+          seguridad tecnológica de tu mascota.</p>
+      </div>
+
+      <div class="row g-4 mb-5 pb-5 border-bottom border-primary border-1 justify-content-center">
+        <!-- Miembro 1: Andres Flores -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card rounded-4 p-3 h-100"
+            style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 152, 0, 0.3);">
+            <div class="team-img-wrapper rounded-4 mb-3 overflow-hidden shadow-sm" style="height: 250px;">
+              <img src="img/1.jpg" alt="Andres Flores" class="w-100 h-100"
+                style="object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="team-info text-center">
+              <h5 class="fw-bold mb-1" style="color: var(--primary);">Andres Flores</h5>
+              <div class="role text-white-50 mb-2 small text-uppercase fw-bold">CEO, Ing. Sistemas & Administrador</div>
+              <p class="text-white small mb-0">Fundador y director general. Líder en ingeniería aplicada al bienestar
+                animal y gestión tecnológica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Miembro 2: Gabriel -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card rounded-4 p-3 h-100"
+            style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 152, 0, 0.3);">
+            <div class="team-img-wrapper rounded-4 mb-3 overflow-hidden shadow-sm" style="height: 250px;">
+              <img src="img/2.jpg" alt="Gabriel" class="w-100 h-100"
+                style="object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="team-info text-center">
+              <h5 class="fw-bold mb-1" style="color: var(--primary);">Gabriel</h5>
+              <div class="role text-white-50 mb-2 small text-uppercase fw-bold">Supervisor de Monitoreo & Marketing
+              </div>
+              <p class="text-white small mb-0">Encargado de la supervisión operacional en tiempo real y del
+                posicionamiento digital de Sinucan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5 justify-content-center">
+        <!-- Miembro 3: Angel -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card rounded-4 p-3 h-100"
+            style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 152, 0, 0.3);">
+            <div class="team-img-wrapper rounded-4 mb-3 overflow-hidden shadow-sm" style="height: 250px;">
+              <img src="img/gps.jpg" alt="Angel" class="w-100 h-100"
+                style="object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="team-info text-center">
+              <h5 class="fw-bold mb-1" style="color: var(--primary);">Angel</h5>
+              <div class="role text-white-50 mb-2 small text-uppercase fw-bold">Paseador Experto</div>
+              <p class="text-white small mb-0">Dedicado al ejercicio y cuidado activo, garantizando la felicidad de cada
+                perrito en campo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Miembro 4: Miguel -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-card rounded-4 p-3 h-100"
+            style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 152, 0, 0.3);">
+            <div class="team-img-wrapper rounded-4 mb-3 overflow-hidden shadow-sm" style="height: 250px;">
+              <img src="img/gps.jpg" alt="Miguel" class="w-100 h-100"
+                style="object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="team-info text-center">
+              <h5 class="fw-bold mb-1" style="color: var(--primary);">Miguel</h5>
+              <div class="role text-white-50 mb-2 small text-uppercase fw-bold">Paseador Experto</div>
+              <p class="text-white small mb-0">Especialista en rutas seguras y socialización canina para una experiencia
+                integral.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Miembro 5: Gabriela Gomez -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="team-card rounded-4 p-3 h-100"
+            style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 152, 0, 0.3);">
+            <div class="team-img-wrapper rounded-4 mb-3 overflow-hidden shadow-sm" style="height: 250px;">
+              <img src="img/helado2.jpg" alt="Gabriela Gomez" class="w-100 h-100"
+                style="object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="team-info text-center">
+              <h5 class="fw-bold mb-1" style="color: var(--primary);">Gabriela Gomez</h5>
+              <div class="role text-white-50 mb-2 small text-uppercase fw-bold">Atención al Cliente & Sinucan FOOD</div>
+              <p class="text-white small mb-0">Corazón de nuestra atención y de la tienda artesanal de snacks y helados
+                saludables.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque Tips para Dueños -->
+      <div id="tips" class="text-center mb-5 mt-5" data-aos="fade-up">
+        <h2 class="section-title fw-bold">Tips para Dueños</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">Consejos expertos para el cuidado de tu
+          mejor amigo.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Tip 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-tint tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Hidratación</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Lleva siempre agua fresca. Los perros se deshidratan rápido; ofrece agua
+                cada 20 minutos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-paw tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Almohadillas</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Evita el asfalto caliente. Si el suelo te quema la mano, también quemará
+                sus patitas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-clock tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Horarios</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Mantén rutinas fijas. La previsibilidad reduce la ansiedad y el estrés en
+                tu mascota.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-dog tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Socialización</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Deja que huela su entorno. Es su forma de informarse y le relaja
+                mentalmente.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 5 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-first-aid tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Fatiga</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Si jadea en exceso o se tumba, detente de inmediato. Busca sombra y
+                descanso real.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 6 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-bone tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Premios</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Usa refuerzo positivo. Premia los buenos comportamientos para fortalecer
+                su obediencia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 7 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-pump-medical tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Higiene</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Limpia sus patas al volver a casa para evitar bacterias y suciedad en tu
+                hogar.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 8 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-qrcode tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">ID Digital</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Usa placas con QR o tu teléfono. La identificación es vital en caso de
+                extravío.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 9 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-link tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Seguridad</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Usa un arnés cómodo pero seguro. Evita correas extensibles que pueden
+                causar accidentes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 10 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-utensils tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Alimentación</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">No le des comida justo antes de pasear para evitar problemas de torsión
+                gástrica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 11 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-cloud-showers-heavy tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Clima</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">En días de lluvia intensa, limita el tiempo fuera y sécalo bien al llegar
+                para evitar hongos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 12 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="550">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-brain tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Estimulación</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Incluye juegos de olfato. Diez minutos de olfato cansan más que una hora
+                corriendo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 13 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-eye tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Lenguaje</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Aprende a leer su cuerpo. La cola baja o las orejas atrás indican miedo o
+                incomodidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 14 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="650">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-baby tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Cachorros</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Comienza con paseos muy cortos tras sus vacunas para socializarlo sin
+                sobrecargarlo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 15 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-heartbeat tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Senior</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Para perros mayores, reduce el ritmo. Paseos lentos son mejores para sus
+                articulaciones.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 16 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="750">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-bug tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Salud</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Mantén al día su desparasitación. El campo y parques exponen a tu perro a
+                pulgas y garrapatas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 17 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-couch tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Relajación</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">El paseo debe cansar su cuerpo y calmar su mente. Si vuelve muy excitado,
+                el paseo falló.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 18 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="850">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-user-ninja tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Control</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">No permitas que él te pasee a ti. Trabaja en que camine a tu lado sin dar
+                tirones bruscos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 19 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-trash tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Ecología</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Recoge siempre sus residuos. Usa bolsas biodegradables para cuidar el
+                medio ambiente.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip 20 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="950">
+          <div class="tip-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-left: 5px solid var(--primary);">
+            <i class="fas fa-stethoscope tip-icon text-primary mb-3" style="font-size: 2rem;"></i>
+            <h4 class="fw-bold fs-5" style="color: var(--primary);">Prevención</h4>
+            <div class="tip-content">
+              <p class="text-white small mb-0">Visita al veterinario anualmente. Un chequeo preventivo vale por mil
+                curas posteriores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ================= Footer ================= -->
+  <footer id="contacto" class="footer-unified-section">
+    <!-- Video de Fondo Footer -->
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="video/5.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container py-5" style="position:relative; z-index:2;">
+      <!-- Título Único -->
+      <div class="text-center mb-5" data-aos="fade-down">
+        <h2 class="section-title fw-bold">Contáctanos</h2>
+        <p class="lead fs-4" style="color: var(--primary); font-weight: 600;">Estamos listos para cuidar de tu mejor
+          amigo.</p>
+      </div>
+
+      <!-- Bloque Contacto Original Estilo -->
+      <div class="row g-5 mb-5 align-items-center">
+        <!-- Formulario de Contacto -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="form-card rounded-4 p-4"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 152, 0, 0.2);">
+            <form id="contactForm" action="https://formsubmit.co/sinucan19@gmail.com" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required />
+                    <label for="nombre">Nombre completo</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+                    <label for="email">Correo electrónico</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" />
+                    <label for="telefono">Teléfono (Opcional)</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto" required />
+                    <label for="asunto">Asunto</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" id="mensaje" name="mensaje" style="height: 120px" placeholder="Mensaje"
+                  required></textarea>
+                <label for="mensaje">Tu mensaje</label>
+              </div>
+              <div class="form-check mb-4 text-start">
+                <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                <label class="form-check-label text-white small" for="privacidad">
+                  He leído y acepto la política de privacidad y el tratamiento de mis datos.
+                </label>
+              </div>
+              <button type="submit" class="btn-animated w-100 py-3 fs-5">Enviar mensaje <i
+                  class="fas fa-paper-plane ms-2"></i></button>
+
+              <!-- Configuración de FormSubmit -->
+              <input type="hidden" name="_next" value="https://sinucantour.github.io/beta1/gracias.html">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde Sinucan" />
+              <input type="hidden" name="_template" value="table">
+            </form>
+          </div>
+        </div>
+
+        <!-- Información Rápida y FAQ -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="info-rapida-card rounded-4 p-4 mb-4"
+            style="background: rgba(255, 152, 0, 0.1); border: 1px dashed var(--primary);">
+            <h4 class="fw-bold mb-4" style="color: var(--primary);">Información de Contacto</h4>
+            <p class="text-white mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> <a href="tel:+573235882174"
+                class="text-white text-decoration-none">+57 3235882174</a></p>
+            <p class="text-white mb-2"><i class="fas fa-envelope text-primary me-2"></i> <a
+                href="mailto:sinucan19@gmail.com" class="text-white text-decoration-none">sinucan19@gmail.com</a></p>
+            <p class="text-white mb-4"><i class="fas fa-map-marker-alt text-primary me-2"></i> Montería, Colombia</p>
+            <div class="d-flex gap-3">
+              <a href="https://facebook.com/sinucantour" class="text-white fs-4 hover-primary"><i
+                  class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/sinucantour" class="text-white fs-4 hover-primary"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/573235882174" class="text-white fs-4 hover-primary"><i
+                  class="fab fa-whatsapp"></i></a>
+              <a href="https://tiktok.com/@sinucantour" class="text-white fs-4 hover-primary"><i
+                  class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="faq-container-footer mt-4">
+            <h4 class="fw-bold mb-3 text-white">Preguntas Frecuentes</h4>
+            <div class="faq-section-footer">
+              <div class="faq-item-small mb-2">
+                <p class="text-primary fw-bold mb-1 small">¿Cuánto dura un paseo?</p>
+                <p class="text-white-50 small">Varían de 30, 45 o 60 min según el plan.</p>
+              </div>
+              <div class="faq-item-small mb-2">
+                <p class="text-primary fw-bold mb-1 small">¿Cómo se realiza el pago?</p>
+                <p class="text-white-50 small">Aceptamos transferencias y pagos en línea.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa y Footer Inferior -->
+      <div class="row g-4 mt-5 pt-5 border-top border-secondary border-1">
+        <div class="col-md-8" data-aos="fade-up">
+          <h5 class="text-primary fw-bold mb-3">Nuestra Ubicación</h5>
+          <div class="map-container rounded-4 overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.124563282212!2d-75.87904892431246!3d8.75838529416119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef4079fa3f9d6e7%3A0x6c7f1e07e1b3f6c!2sMonter%C3%ADa%2C%20C%C3%B3rdoba%2C%20Colombia!5e0!3m2!1ses!2sco!4v1694500000000!5m2!1ses!2sco"
+              width="100%" height="200" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-primary fw-bold">Sinucan</h4>
+          <p class="text-white-50">Tecnología y amor por tu mejor amigo.</p>
+          <div class="mt-4">
+            <p class="small text-white-50 mb-0">&copy; 2025 Sinucan.</p>
+            <p class="small text-white-50">Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </footer>
+
+
+
+
+  <!-- ===== Bootstrap JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== Swiper JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- ===== AOS JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- ===== Tu JS personalizado ===== -->
+  <script src="sinucan.js"></script>
+</body>
+
+</html>
